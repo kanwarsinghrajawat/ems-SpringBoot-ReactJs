@@ -33,6 +33,11 @@ public class EmployeeServiceImplTest {
     }
 
     @Test
+
+//    An EmployeeDataDto with specific values.
+//    When: The createEmployee method is called.
+//    Then: The saved EmployeeDataDto should match the given input values.
+
     public void testCreateEmployee() {
         // Given
         EmployeeDataDto employeeDataDto = new EmployeeDataDto();
@@ -68,6 +73,10 @@ public class EmployeeServiceImplTest {
     }
 
     @Test
+
+//    Given: An existing employee ID and an EmployeeDataDto with updated values.
+//    When: The updateEmployee method is called.
+//    Then: The updated EmployeeDataDto should match the given input values.
     public void testUpdateEmployee() {
         // Given
         Long employeeId = 1L;
@@ -105,6 +114,10 @@ public class EmployeeServiceImplTest {
     }
 
     @Test
+
+//    Given: A list of Employee entities.
+//    When: The getAllEmployees method is called.
+//    Then: The returned list of EmployeeDataDto should match the given employees' values.
     public void testGetAllEmployees() {
         // Given
         List<Employee> employees = new ArrayList<>();
@@ -139,6 +152,11 @@ public class EmployeeServiceImplTest {
     }
 
     @Test
+
+//    Given: An existing employee ID.
+//    When: The deleteEmployee method is called.
+//    Then: The repository's deleteById method should be called once.
+
     public void testDeleteEmployee() {
         // Given
         Long employeeId = 1L;
@@ -160,6 +178,11 @@ public class EmployeeServiceImplTest {
     }
 
     @Test
+
+
+//    Given: An email and password.
+//    When: The checkEmployeeCredentials method is called.
+//            Then: The returned EmployeeDataDto should match the given email and password.
     public void testCheckEmployeeCredentials() {
         String email = "john.doe@example.com";
         String password = "password";
